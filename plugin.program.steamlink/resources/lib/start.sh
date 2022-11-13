@@ -1,8 +1,3 @@
 #!/bin/bash
-
-DIRNAME=$( dirname "${BASH_SOURCE[0]}" )
-
-sudo openvt -c 7 -s -f -- su kodi -c "bash ${DIRNAME}/heartbeat.sh & /usr/bin/steamlink &"
-sudo systemctl stop kodi
-
+sudo openvt -c 7 -s -f -v -- su kodi -c "bash ~/.kodi/addons/plugin.program.steamlink/resources/lib/steam-launcher.sh &"
 exit

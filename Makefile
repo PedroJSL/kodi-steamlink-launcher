@@ -1,13 +1,13 @@
 SHELL = /bin/bash
 
 BUNDLE = kodi-steamlink-launcher
-VERSION = $(shell git describe --tags)
+VERSION = '1.0.0'
 PLUGIN_RESOURCES = plugin.program.steamlink
 
 .PHONY: dist
 dist: dist-clean
 	@mkdir -p dist
-	@7z a -tzip dist/$(BUNDLE)-$(VERSION).zip $(PLUGIN_RESOURCES)
+	@/Users/psuarez/Downloads/7z2107-mac/7zz a -tzip dist/$(BUNDLE)-$(VERSION).zip $(PLUGIN_RESOURCES)
 
 .PHONY: clean
 clean:

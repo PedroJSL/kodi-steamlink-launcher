@@ -1,9 +1,8 @@
 #!/bin/bash
-
-sleep 10
+sleep 5
 
 while pgrep steamlink &>/dev/null; do
-  sleep 5
+  sleep 1
 done
 
 sudo systemctl restart kodi
